@@ -1,0 +1,64 @@
+# pyenv-related files
+.python-version  # pyenv local version file
+
+# Python cache and build files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments (if using pyenv-virtualenv or other venv tools)
+venv/
+env/
+.venv/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables
+.env
+.envrc
+.secrets
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
