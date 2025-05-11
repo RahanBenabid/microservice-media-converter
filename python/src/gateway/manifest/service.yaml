@@ -8,5 +8,5 @@ spec:
   type: ClusterIP
   ports:
     - port: 8080
-      targetPort: 8080  # Corrected typo
+      targetPort: 8080
       protocol: TCP

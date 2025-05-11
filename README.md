@@ -29,4 +29,12 @@ kubectl get ingress
 
 # Or if using minikube
 minikube service gateway --url
+
+# some useful commands
+cd gateway/manifest
+kubectl apply -f ./
+cd ../../auth/manifest
+kubectl apply -f ./
+cd ../../rabbit/manifest
+kubectl apply -f ./
 ```

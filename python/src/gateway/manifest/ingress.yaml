@@ -6,6 +6,7 @@ metadata:
     ngnix.ingress.kubernetes.io/proxy-body-size: "0"
     ngnix.ingress.kubernetes.io/proxy-read-timeout: "600"
     ngnix.ingress.kubernetes.io/proxy-send-timeout: "600"
+    #ngnix.ingress.kubernetes.io/proxy-max-temp-file-size: "1024m"
 spec:
   rules:
     - host: mp3converter.com
