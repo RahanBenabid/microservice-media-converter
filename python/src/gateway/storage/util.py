@@ -14,6 +14,7 @@ def upload(f, fs, channel, access):
     # get the file id after putting it
     fid = fs.put(f)
   except Exception as err:
+    print(err)
     return "Internal server error", 500
   
   message = {
@@ -21,9 +22,10 @@ def upload(f, fs, channel, access):
     "mp3_fid": None,
     "username": access["username"],
   }
+  
   # try to put the message on the queue
   try:
-    channel.basic_public(
+    channel.basic_publish(
       exhange="",
       routing_key="video",
       body=json.dumps(message),

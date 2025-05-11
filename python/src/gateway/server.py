@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import os, gridfs, pika, json
-from flask import Flask, request
+from flask import Flask, request, send_file
 from flask_pymongo import PyMongo
 from auth import validate
 from auth_svc import access
@@ -29,7 +29,7 @@ def login():
   else:
     return err
   
-@server.route("/login", methods=["POST"])
+@server.route("/upload", methods=["POST"])
 def upload():
   access, err = validate.token(request)
   

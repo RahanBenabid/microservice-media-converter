@@ -21,6 +21,8 @@ spec:
       containers:
         - name: gateway
           image: zibizib/gateway
+          ports:
+            - containerPort: 8080
           envFrom:
             - configMapRef:
                 name: gateway-configmap

@@ -24,7 +24,7 @@ def login():
 	# check db for username and pw
 	cur = mysql.connection.cursor()
 	res = cur.execute(
-		"SELECT email, password FROM user WEHRE email=%s", (auth.username,)
+		"SELECT email, password FROM user WHERE email=%s", (auth.username,)
 	)
 	
 	if res > 0:
@@ -51,7 +51,7 @@ def validate():
 	
 	try:
 		decoded = jwt.decode(
-			encoded_jwt, os.environ.get("JWT_SECRET"), algorithm=["HS256"]
+			encoded_jwt, os.environ.get("JWT_SECRET"), algorithms=["HS256"]
 		)
 	except:
 		return "Not authorized", 403
